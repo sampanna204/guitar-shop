@@ -7,51 +7,51 @@ export default function App() {
   const guitars = [
     {
       id: 1,
-      name: 'Classic Acoustic',
+      name: 'Yamaha F310 Acoustic',
       category: 'acoustic',
-      price: 'NPR 118,000',
-      image: 'https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=400&h=500&fit=crop',
-      description: 'Warm, rich tones for traditional melodies'
+      price: 'NPR 22,500',
+      image: 'https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=500&h=600&fit=crop',
+      description: 'Classic Yamaha quality with warm tone'
     },
     {
       id: 2,
-      name: 'Electric Legend',
+      name: 'Yamaha Pacifica 112V',
       category: 'electric',
-      price: 'NPR 170,000',
-      image: 'https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&h=500&fit=crop',
-      description: 'Rock & roll ready with powerful sound'
+      price: 'NPR 45,000',
+      image: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=500&h=600&fit=crop',
+      description: 'Versatile electric guitar for all styles'
     },
     {
       id: 3,
-      name: 'Vintage Sunburst',
-      category: 'electric',
-      price: 'NPR 196,000',
-      image: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&h=500&fit=crop',
-      description: 'Timeless classic with vintage appeal'
+      name: 'Mantra M-200 Acoustic',
+      category: 'acoustic',
+      price: 'NPR 18,000',
+      image: 'https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=500&h=600&fit=crop',
+      description: 'Premium Nepalese craftsmanship'
     },
     {
       id: 4,
-      name: 'Folk Dreamer',
+      name: 'Sahana S-1 Classical',
       category: 'acoustic',
-      price: 'NPR 98,000',
-      image: 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&h=500&fit=crop',
-      description: 'Perfect for storytelling and folk music'
+      price: 'NPR 15,500',
+      image: 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=500&h=600&fit=crop',
+      description: 'Perfect for classical and folk music'
     },
     {
       id: 5,
-      name: 'Jazz Master',
-      category: 'electric',
-      price: 'NPR 235,000',
-      image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?w=400&h=500&fit=crop',
-      description: 'Smooth & sophisticated jazz tones'
+      name: 'Yamaha FG800',
+      category: 'acoustic',
+      price: 'NPR 35,000',
+      image: 'https://images.unsplash.com/photo-1510034141778-a4d065653d92?w=500&h=600&fit=crop',
+      description: 'Professional-grade acoustic guitar'
     },
     {
       id: 6,
-      name: 'Steel String Pro',
-      category: 'acoustic',
-      price: 'NPR 131,000',
-      image: 'https://images.unsplash.com/photo-1510034141778-a4d065653d92?w=400&h=500&fit=crop',
-      description: 'Crystal clear sound with premium build'
+      name: 'Mantra Elite Electric',
+      category: 'electric',
+      price: 'NPR 28,000',
+      image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?w=500&h=600&fit=crop',
+      description: 'Handcrafted electric with rich sustain'
     }
   ]
 
