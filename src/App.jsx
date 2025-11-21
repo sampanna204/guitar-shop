@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [user, setUser] = useState(null)
   const [showAuthModal, setShowAuthModal] = useState(false)
@@ -233,11 +234,11 @@ export default function App() {
       <nav className="navbar">
         <div className="nav-content">
           <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>Vintage Strings</div>
-          <div className="nav-links">
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+            <a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a>
+            <a href="#products" onClick={() => setIsMenuOpen(false)}>Products</a>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
           </div>
           <div className="nav-icons">
             <button 
@@ -268,6 +269,11 @@ export default function App() {
                 </span>
               )}
             </button>
+            <div className={`nav-toggle ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </div>
           </div>
         </div>
       </nav>
