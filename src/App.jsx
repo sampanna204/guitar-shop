@@ -24,7 +24,7 @@ export default function App() {
     {
       id: 3,
       name: 'Mantra Heritage',
-      category: 'electric',
+      category: 'acoustic',
       price: 'NPR 35,000',
       image: '/attached_assets/image_1763738282953.png',
       description: 'Rich heritage with modern playability'
@@ -40,7 +40,7 @@ export default function App() {
     {
       id: 5,
       name: 'Sahana Huchill',
-      category: 'acoustic',
+      category: 'electric',
       price: 'NPR 28,000',
       image: '/attached_assets/download_1763738289678.jpg',
       description: 'Classic acoustic with premium tone'
@@ -77,7 +77,7 @@ export default function App() {
       name: 'Guitar Strings Set',
       category: 'accessory',
       price: 'NPR 800',
-      image: '/attached_assets/images_1763737388792.jpg',
+      image: '/attached_assets/download_1763737298828.jpg',
       description: 'Premium quality strings for acoustic and electric'
     },
     {
@@ -85,7 +85,7 @@ export default function App() {
       name: 'Guitar Picks Pack',
       category: 'accessory',
       price: 'NPR 250',
-      image: '/attached_assets/download_1763737335525.jpg',
+      image: '/attached_assets/download_1763737307412.jpg',
       description: 'Variety pack of premium picks'
     },
     {
@@ -93,7 +93,7 @@ export default function App() {
       name: 'Guitar Capo',
       category: 'accessory',
       price: 'NPR 1,200',
-      image: '/attached_assets/download_1763737298828.jpg',
+      image: '/attached_assets/download_1763737314152.jpg',
       description: 'Professional grade capo for perfect tuning'
     },
     {
@@ -101,7 +101,7 @@ export default function App() {
       name: 'Guitar Stand',
       category: 'accessory',
       price: 'NPR 1,500',
-      image: '/attached_assets/download_1763737307412.jpg',
+      image: '/attached_assets/download_1763737335525.jpg',
       description: 'Sturdy and protective guitar stand'
     },
     {
@@ -117,7 +117,7 @@ export default function App() {
       name: 'Tuner',
       category: 'accessory',
       price: 'NPR 1,800',
-      image: '/attached_assets/download_1763737314152.jpg',
+      image: '/attached_assets/download_1763737408999.jpg',
       description: 'Digital tuner with high precision'
     }
   ]
