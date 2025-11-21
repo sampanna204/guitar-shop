@@ -1,15 +1,33 @@
-import { useState } from 'react'
+
+import { useState, useEffect } from 'react'
 import './App.css'
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('all')
+  const [user, setUser] = useState(null)
+  const [showAuthModal, setShowAuthModal] = useState(false)
+  const [authMode, setAuthMode] = useState('login')
+  const [cart, setCart] = useState([])
+  const [showCart, setShowCart] = useState(false)
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    name: ''
+  })
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user')
+    const savedCart = localStorage.getItem('cart')
+    if (savedUser) setUser(JSON.parse(savedUser))
+    if (savedCart) setCart(JSON.parse(savedCart))
+  }, [])
 
   const guitars = [
     {
       id: 1,
       name: 'Mantra Karma',
       category: 'acoustic',
-      price: 'NPR 18,500',
+      price: 18500,
       image: '/attached_assets/image_1763738273431.png',
       description: 'Premium Nepalese craftsmanship with beautiful design'
     },
@@ -17,7 +35,7 @@ export default function App() {
       id: 2,
       name: 'Mantra Prakriti',
       category: 'acoustic',
-      price: 'NPR 22,500',
+      price: 22500,
       image: '/attached_assets/download_1763738284808.jpg',
       description: 'Warm tones perfect for traditional melodies'
     },
@@ -25,7 +43,7 @@ export default function App() {
       id: 3,
       name: 'Mantra Heritage',
       category: 'acoustic',
-      price: 'NPR 35,000',
+      price: 35000,
       image: '/attached_assets/image_1763738282953.png',
       description: 'Rich heritage with modern playability'
     },
@@ -33,7 +51,7 @@ export default function App() {
       id: 4,
       name: 'Mantra Headless',
       category: 'electric',
-      price: 'NPR 49,000',
+      price: 49000,
       image: '/attached_assets/download_1763738286135.jpg',
       description: 'Innovative headless design with modern appeal'
     },
@@ -41,7 +59,7 @@ export default function App() {
       id: 5,
       name: 'Sahana Huchill',
       category: 'electric',
-      price: 'NPR 28,000',
+      price: 28000,
       image: '/attached_assets/download_1763738289678.jpg',
       description: 'Classic acoustic with premium tone'
     },
@@ -49,7 +67,7 @@ export default function App() {
       id: 6,
       name: 'Sahana Bazz',
       category: 'electric',
-      price: 'NPR 58,000',
+      price: 58000,
       image: '/attached_assets/download_1763738291852.jpg',
       description: 'Unique artistic design with powerful sound'
     },
@@ -57,7 +75,7 @@ export default function App() {
       id: 7,
       name: 'Sahana Kali',
       category: 'electric',
-      price: 'NPR 65,000',
+      price: 65000,
       image: '/attached_assets/download_1763738293165.jpg',
       description: 'Rare wood finish with exceptional sustain'
     },
@@ -65,7 +83,7 @@ export default function App() {
       id: 8,
       name: 'Parth 2',
       category: 'electric',
-      price: 'NPR 72,000',
+      price: 72000,
       image: '/attached_assets/download_1763738294363.jpg',
       description: 'Modern headless design with versatile sound options'
     }
@@ -76,7 +94,7 @@ export default function App() {
       id: 101,
       name: 'Guitar Strings Set',
       category: 'accessory',
-      price: 'NPR 800',
+      price: 800,
       image: '/attached_assets/download_1763739328597.jpg',
       description: 'Premium quality strings for acoustic and electric'
     },
@@ -84,7 +102,7 @@ export default function App() {
       id: 102,
       name: 'Guitar Picks Pack',
       category: 'accessory',
-      price: 'NPR 250',
+      price: 250,
       image: '/attached_assets/download_1763739291043.jpg',
       description: 'Variety pack of premium picks'
     },
@@ -92,33 +110,33 @@ export default function App() {
       id: 103,
       name: 'Guitar Capo',
       category: 'accessory',
-      price: 'NPR 1,200',
+      price: 1200,
       image: '/attached_assets/download_1763739417125.jpg',
       description: 'Professional grade capo for perfect tuning'
     },
     {
       id: 104,
-      name: 'Guitar Stand',
+      name: 'Guitar Tuner',
       category: 'accessory',
-      price: 'NPR 1,500',
-      image: '/attached_assets/download_1763739468868.jpg',
-      description: 'Sturdy and protective guitar stand'
+      price: 1800,
+      image: '/attached_assets/download_1763739443223.jpg',
+      description: 'Digital tuner with high precision'
     },
     {
       id: 105,
       name: 'Guitar Bag',
       category: 'accessory',
-      price: 'NPR 2,500',
+      price: 2500,
       image: '/attached_assets/images_1763739393655.jpg',
       description: 'Padded protection for your instrument'
     },
     {
       id: 106,
-      name: 'Tuner',
+      name: 'Guitar Stand',
       category: 'accessory',
-      price: 'NPR 1,800',
-      image: '/attached_assets/download_1763739443223.jpg',
-      description: 'Digital tuner with high precision'
+      price: 1500,
+      image: '/attached_assets/download_1763739468868.jpg',
+      description: 'Sturdy and protective guitar stand'
     }
   ]
 
@@ -127,6 +145,88 @@ export default function App() {
   const filteredProducts = selectedCategory === 'all' 
     ? allProducts 
     : allProducts.filter(p => p.category === selectedCategory)
+
+  const handleAuth = (e) => {
+    e.preventDefault()
+    if (authMode === 'signup') {
+      const newUser = {
+        name: formData.name,
+        email: formData.email
+      }
+      setUser(newUser)
+      localStorage.setItem('user', JSON.stringify(newUser))
+      alert('Account created successfully!')
+    } else {
+      const newUser = {
+        name: formData.name || 'User',
+        email: formData.email
+      }
+      setUser(newUser)
+      localStorage.setItem('user', JSON.stringify(newUser))
+      alert('Logged in successfully!')
+    }
+    setShowAuthModal(false)
+    setFormData({ email: '', password: '', name: '' })
+  }
+
+  const handleLogout = () => {
+    setUser(null)
+    localStorage.removeItem('user')
+    alert('Logged out successfully!')
+  }
+
+  const addToCart = (product) => {
+    if (!user) {
+      alert('Please login to add items to cart')
+      setShowAuthModal(true)
+      return
+    }
+    const existingItem = cart.find(item => item.id === product.id)
+    let newCart
+    if (existingItem) {
+      newCart = cart.map(item =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    } else {
+      newCart = [...cart, { ...product, quantity: 1 }]
+    }
+    setCart(newCart)
+    localStorage.setItem('cart', JSON.stringify(newCart))
+    alert('Added to cart!')
+  }
+
+  const updateQuantity = (id, change) => {
+    const newCart = cart.map(item => {
+      if (item.id === id) {
+        const newQuantity = item.quantity + change
+        return newQuantity > 0 ? { ...item, quantity: newQuantity } : null
+      }
+      return item
+    }).filter(Boolean)
+    setCart(newCart)
+    localStorage.setItem('cart', JSON.stringify(newCart))
+  }
+
+  const removeFromCart = (id) => {
+    const newCart = cart.filter(item => item.id !== id)
+    setCart(newCart)
+    localStorage.setItem('cart', JSON.stringify(newCart))
+  }
+
+  const getCartTotal = () => {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0)
+  }
+
+  const handleCheckout = () => {
+    if (cart.length === 0) {
+      alert('Your cart is empty!')
+      return
+    }
+    alert(`Order placed successfully! Total: NPR ${getCartTotal().toLocaleString()}\nThank you for shopping with Vintage Strings!`)
+    setCart([])
+    localStorage.setItem('cart', JSON.stringify([]))
+    setShowCart(false)
+  }
 
   return (
     <div className="app">
@@ -138,6 +238,17 @@ export default function App() {
             <a href="#products">Products</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
+            <button className="cart-btn" onClick={() => setShowCart(!showCart)}>
+              🛒 Cart ({cart.length})
+            </button>
+            {user ? (
+              <div className="user-menu">
+                <span>Hi, {user.name}</span>
+                <button onClick={handleLogout} className="auth-btn">Logout</button>
+              </div>
+            ) : (
+              <button onClick={() => setShowAuthModal(true)} className="auth-btn">Login</button>
+            )}
           </div>
         </div>
       </nav>
@@ -146,8 +257,9 @@ export default function App() {
         <div className="hero-content">
           <h1 className="hero-title">Discover Your Perfect Melody</h1>
           <p className="hero-subtitle">Exquisite guitars handcrafted for the discerning musician</p>
+          <p className="hero-tagline">Born from friendship and fueled by passion, Vintage Strings is where guitars speak, music lives, and creativity flows.</p>
           <p className="hero-description">From the bustling streets of Kathmandu to your fingertips - experience the finest collection of acoustic and electric guitars, each telling its own unique story</p>
-          <button className="cta-button">Explore Collection</button>
+          <button className="cta-button" onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>Explore Collection</button>
         </div>
         <div className="hero-decoration">
           <div className="float-icon">♪</div>
@@ -196,8 +308,8 @@ export default function App() {
               <h3 className="guitar-name">{product.name}</h3>
               <p className="guitar-description">{product.description}</p>
               <div className="guitar-footer">
-                <span className="guitar-price">{product.price}</span>
-                <button className="buy-button">View Details</button>
+                <span className="guitar-price">NPR {product.price.toLocaleString()}</span>
+                <button className="buy-button" onClick={() => addToCart(product)}>Add to Cart</button>
               </div>
             </div>
           ))}
@@ -252,6 +364,85 @@ export default function App() {
           <p>&copy; 2024 Vintage Strings. All rights reserved.</p>
         </div>
       </footer>
+
+      {showAuthModal && (
+        <div className="modal-overlay" onClick={() => setShowAuthModal(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowAuthModal(false)}>×</button>
+            <h2>{authMode === 'login' ? 'Login' : 'Sign Up'}</h2>
+            <form onSubmit={handleAuth}>
+              {authMode === 'signup' && (
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                />
+              )}
+              <input
+                type="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                required
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                required
+              />
+              <button type="submit" className="submit-btn">
+                {authMode === 'login' ? 'Login' : 'Sign Up'}
+              </button>
+            </form>
+            <p className="auth-toggle">
+              {authMode === 'login' ? "Don't have an account? " : "Already have an account? "}
+              <span onClick={() => setAuthMode(authMode === 'login' ? 'signup' : 'login')}>
+                {authMode === 'login' ? 'Sign Up' : 'Login'}
+              </span>
+            </p>
+          </div>
+        </div>
+      )}
+
+      {showCart && (
+        <div className="modal-overlay" onClick={() => setShowCart(false)}>
+          <div className="modal-content cart-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowCart(false)}>×</button>
+            <h2>Your Cart</h2>
+            {cart.length === 0 ? (
+              <p className="empty-cart">Your cart is empty</p>
+            ) : (
+              <>
+                <div className="cart-items">
+                  {cart.map(item => (
+                    <div key={item.id} className="cart-item">
+                      <img src={item.image} alt={item.name} />
+                      <div className="cart-item-info">
+                        <h4>{item.name}</h4>
+                        <p>NPR {item.price.toLocaleString()}</p>
+                      </div>
+                      <div className="cart-item-controls">
+                        <button onClick={() => updateQuantity(item.id, -1)}>-</button>
+                        <span>{item.quantity}</span>
+                        <button onClick={() => updateQuantity(item.id, 1)}>+</button>
+                      </div>
+                      <button className="remove-btn" onClick={() => removeFromCart(item.id)}>Remove</button>
+                    </div>
+                  ))}
+                </div>
+                <div className="cart-total">
+                  <h3>Total: NPR {getCartTotal().toLocaleString()}</h3>
+                  <button className="checkout-btn" onClick={handleCheckout}>Checkout</button>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
