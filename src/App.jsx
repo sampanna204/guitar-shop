@@ -7,7 +7,7 @@ export default function App() {
   const guitars = [
     {
       id: 1,
-      name: 'Mantra Prakriti Nak Series',
+      name: 'Mantra Karma',
       category: 'acoustic',
       price: 'NPR 18,500',
       image: '/attached_assets/images_1763737388792.jpg',
@@ -15,7 +15,7 @@ export default function App() {
     },
     {
       id: 2,
-      name: 'Mantra Ashor Electric',
+      name: 'Mantra Prakriti',
       category: 'electric',
       price: 'NPR 49,000',
       image: '/attached_assets/download_1763737335525.jpg',
@@ -23,7 +23,7 @@ export default function App() {
     },
     {
       id: 3,
-      name: 'Sahana Acoustic Classic',
+      name: 'Mantra Heritage',
       category: 'acoustic',
       price: 'NPR 22,500',
       image: '/attached_assets/download_1763737298828.jpg',
@@ -31,15 +31,15 @@ export default function App() {
     },
     {
       id: 4,
-      name: 'Yamaha Acoustic Guitar',
+      name: 'Mantra Headless',
       category: 'acoustic',
       price: 'NPR 35,000',
       image: '/attached_assets/download_1763737307412.jpg',
-      description: 'Professional quality with rich, clear sound'
+      description: 'Innovative headless design with modern appeal'
     },
     {
       id: 5,
-      name: 'Premium Electric Guitar',
+      name: 'Sahana Huchill',
       category: 'electric',
       price: 'NPR 65,000',
       image: '/attached_assets/download_1763737341000.jpg',
@@ -47,7 +47,7 @@ export default function App() {
     },
     {
       id: 6,
-      name: 'Designer Electric Guitar',
+      name: 'Sahana Bazz',
       category: 'electric',
       price: 'NPR 58,000',
       image: '/attached_assets/download_1763737314152.jpg',
@@ -55,7 +55,7 @@ export default function App() {
     },
     {
       id: 7,
-      name: 'Exotic Wood Electric',
+      name: 'Sahana Kali',
       category: 'electric',
       price: 'NPR 72,000',
       image: '/attached_assets/download_1763737408999.jpg',
@@ -63,7 +63,7 @@ export default function App() {
     },
     {
       id: 8,
-      name: 'Rudra Right Electric',
+      name: 'Parth 2',
       category: 'electric',
       price: 'NPR 45,000',
       image: '/attached_assets/rudraright_1763737286030.webp',
