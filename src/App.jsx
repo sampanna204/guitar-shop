@@ -77,7 +77,7 @@ export default function App() {
       name: 'Guitar Strings Set',
       category: 'accessory',
       price: 'NPR 800',
-      image: '/attached_assets/download_1763737298828.jpg',
+      image: '/attached_assets/download_1763739328597.jpg',
       description: 'Premium quality strings for acoustic and electric'
     },
     {
@@ -85,7 +85,7 @@ export default function App() {
       name: 'Guitar Picks Pack',
       category: 'accessory',
       price: 'NPR 250',
-      image: '/attached_assets/download_1763737307412.jpg',
+      image: '/attached_assets/download_1763739291043.jpg',
       description: 'Variety pack of premium picks'
     },
     {
@@ -93,7 +93,7 @@ export default function App() {
       name: 'Guitar Capo',
       category: 'accessory',
       price: 'NPR 1,200',
-      image: '/attached_assets/download_1763737314152.jpg',
+      image: '/attached_assets/download_1763739417125.jpg',
       description: 'Professional grade capo for perfect tuning'
     },
     {
@@ -101,7 +101,7 @@ export default function App() {
       name: 'Guitar Stand',
       category: 'accessory',
       price: 'NPR 1,500',
-      image: '/attached_assets/download_1763737335525.jpg',
+      image: '/attached_assets/download_1763739468868.jpg',
       description: 'Sturdy and protective guitar stand'
     },
     {
@@ -109,7 +109,7 @@ export default function App() {
       name: 'Guitar Bag',
       category: 'accessory',
       price: 'NPR 2,500',
-      image: '/attached_assets/download_1763737341000.jpg',
+      image: '/attached_assets/download_1763739443223.jpg',
       description: 'Padded protection for your instrument'
     },
     {
@@ -117,7 +117,7 @@ export default function App() {
       name: 'Tuner',
       category: 'accessory',
       price: 'NPR 1,800',
-      image: '/attached_assets/download_1763737408999.jpg',
+      image: '/attached_assets/images_1763739393655.jpg',
       description: 'Digital tuner with high precision'
     }
   ]
