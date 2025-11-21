@@ -232,7 +232,7 @@ export default function App() {
     <div className="app">
       <nav className="navbar">
         <div className="nav-content">
-          <div className="logo" onClick={() => window.location.reload()} style={{ cursor: 'pointer' }}>Vintage Strings</div>
+          <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>Vintage Strings</div>
           <div className="nav-links">
             <a href="#home">Home</a>
             <a href="#products">Products</a>
