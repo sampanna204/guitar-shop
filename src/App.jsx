@@ -7,51 +7,67 @@ export default function App() {
   const guitars = [
     {
       id: 1,
-      name: 'Yamaha F310 Acoustic',
+      name: 'Mantra Prakriti Nak Series',
       category: 'acoustic',
-      price: 'NPR 22,500',
-      image: 'https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=500&h=600&fit=crop',
-      description: 'Classic Yamaha quality with warm tone'
+      price: 'NPR 18,500',
+      image: '/attached_assets/images_1763737388792.jpg',
+      description: 'Premium Nepalese craftsmanship with beautiful design'
     },
     {
       id: 2,
-      name: 'Yamaha Pacifica 112V',
+      name: 'Mantra Ashor Electric',
       category: 'electric',
-      price: 'NPR 45,000',
-      image: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=500&h=600&fit=crop',
-      description: 'Versatile electric guitar for all styles'
+      price: 'NPR 49,000',
+      image: '/attached_assets/download_1763737335525.jpg',
+      description: 'Stunning blue electric guitar with exceptional tone'
     },
     {
       id: 3,
-      name: 'Mantra M-200 Acoustic',
+      name: 'Sahana Acoustic Classic',
       category: 'acoustic',
-      price: 'NPR 18,000',
-      image: 'https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=500&h=600&fit=crop',
-      description: 'Premium Nepalese craftsmanship'
+      price: 'NPR 22,500',
+      image: '/attached_assets/download_1763737298828.jpg',
+      description: 'Warm tones perfect for traditional melodies'
     },
     {
       id: 4,
-      name: 'Sahana S-1 Classical',
+      name: 'Yamaha Acoustic Guitar',
       category: 'acoustic',
-      price: 'NPR 15,500',
-      image: 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=500&h=600&fit=crop',
-      description: 'Perfect for classical and folk music'
+      price: 'NPR 35,000',
+      image: '/attached_assets/download_1763737307412.jpg',
+      description: 'Professional quality with rich, clear sound'
     },
     {
       id: 5,
-      name: 'Yamaha FG800',
-      category: 'acoustic',
-      price: 'NPR 35,000',
-      image: 'https://images.unsplash.com/photo-1510034141778-a4d065653d92?w=500&h=600&fit=crop',
-      description: 'Professional-grade acoustic guitar'
+      name: 'Premium Electric Guitar',
+      category: 'electric',
+      price: 'NPR 65,000',
+      image: '/attached_assets/download_1763737341000.jpg',
+      description: 'High-end electric with stunning finish'
     },
     {
       id: 6,
-      name: 'Mantra Elite Electric',
+      name: 'Designer Electric Guitar',
       category: 'electric',
-      price: 'NPR 28,000',
-      image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?w=500&h=600&fit=crop',
-      description: 'Handcrafted electric with rich sustain'
+      price: 'NPR 58,000',
+      image: '/attached_assets/download_1763737314152.jpg',
+      description: 'Unique artistic design with powerful sound'
+    },
+    {
+      id: 7,
+      name: 'Exotic Wood Electric',
+      category: 'electric',
+      price: 'NPR 72,000',
+      image: '/attached_assets/download_1763737408999.jpg',
+      description: 'Rare wood finish with exceptional sustain'
+    },
+    {
+      id: 8,
+      name: 'Rudra Right Electric',
+      category: 'electric',
+      price: 'NPR 45,000',
+      image: '/attached_assets/rudraright_1763737286030.webp',
+      description: 'Modern design with versatile sound options'
     }
   ]
 
