@@ -238,17 +238,36 @@ export default function App() {
             <a href="#products">Products</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-            <button className="cart-btn" onClick={() => setShowCart(!showCart)}>
-              🛒 Cart ({cart.length})
+          </div>
+          <div className="nav-icons">
+            <button 
+              className="icon-btn" 
+              onClick={() => user ? handleLogout() : setShowAuthModal(true)}
+              title={user ? `Hi, ${user.name} - Click to logout` : "Login"}
+              aria-label={user ? `Logged in as ${user.name}, click to logout` : "Login"}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
             </button>
-            {user ? (
-              <div className="user-menu">
-                <span>Hi, {user.name}</span>
-                <button onClick={handleLogout} className="auth-btn">Logout</button>
-              </div>
-            ) : (
-              <button onClick={() => setShowAuthModal(true)} className="auth-btn">Login</button>
-            )}
+            <button 
+              className="icon-btn cart-icon" 
+              onClick={() => setShowCart(!showCart)}
+              title="Shopping Cart"
+              aria-label={`Shopping cart with ${cart.reduce((sum, item) => sum + item.quantity, 0)} items`}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              {cart.reduce((sum, item) => sum + item.quantity, 0) > 0 && (
+                <span className="cart-badge">
+                  {cart.reduce((sum, item) => sum + item.quantity, 0)}
+                </span>
+              )}
+            </button>
           </div>
         </div>
       </nav>
