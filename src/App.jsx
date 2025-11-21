@@ -255,10 +255,8 @@ export default function App() {
 
       <section className="hero" id="home">
         <div className="hero-content">
-          <h1 className="hero-title">Discover Your Perfect Melody</h1>
-          <p className="hero-subtitle">Exquisite guitars handcrafted for the discerning musician</p>
+          <h1 className="hero-title">Vintage Strings</h1>
           <p className="hero-tagline">Born from friendship and fueled by passion, Vintage Strings is where guitars speak, music lives, and creativity flows.</p>
-          <p className="hero-description">From the bustling streets of Kathmandu to your fingertips - experience the finest collection of acoustic and electric guitars, each telling its own unique story</p>
           <button className="cta-button" onClick={() => document.getElementById('products').scrollIntoView({ behavior: 'smooth' })}>Explore Collection</button>
         </div>
         <div className="hero-decoration">

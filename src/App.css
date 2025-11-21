@@ -27,7 +27,7 @@ body {
 }
 
 .nav-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -47,14 +47,15 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
+  align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #2c2419;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
   position: relative;
@@ -83,12 +84,13 @@ body {
   background: #8b5a3c;
   color: white;
   border: none;
-  padding: 0.6rem 1.5rem;
-  border-radius: 25px;
+  padding: 0.75rem 1.8rem;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .cart-btn:hover, .auth-btn:hover {
@@ -105,6 +107,7 @@ body {
 .user-menu span {
   color: #2c2419;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .hero {
@@ -143,36 +146,16 @@ body {
   font-size: 5rem;
   font-weight: 700;
   color: #2c2419;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   line-height: 1.2;
 }
 
-.hero-subtitle {
+.hero-tagline {
   font-size: 1.3rem;
   color: #6b5444;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-.hero-description {
-  font-size: 1rem;
-  color: #8b7355;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   font-weight: 400;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-  font-style: italic;
-}
-
-.hero-tagline {
-  font-size: 1.1rem;
-  color: #6b5444;
-  margin-bottom: 1rem;
-  font-weight: 500;
-  max-width: 750px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.8;
