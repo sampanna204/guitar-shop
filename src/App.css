@@ -37,10 +37,12 @@ body {
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #8b5a3c;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 .nav-links {
@@ -118,9 +120,21 @@ body {
 .hero-subtitle {
   font-size: 1.3rem;
   color: #6b5444;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #8b7355;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-style: italic;
 }
 
 .cta-button {
@@ -253,14 +267,17 @@ body {
 }
 
 .guitar-icon {
-  font-size: 5rem;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
   margin-bottom: 1.5rem;
-  filter: grayscale(30%);
   transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .guitar-card:hover .guitar-icon {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.05);
 }
 
 .guitar-name {
