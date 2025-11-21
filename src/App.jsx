@@ -109,7 +109,7 @@ export default function App() {
       name: 'Guitar Bag',
       category: 'accessory',
       price: 'NPR 2,500',
-      image: '/attached_assets/download_1763739443223.jpg',
+      image: '/attached_assets/images_1763739393655.jpg',
       description: 'Padded protection for your instrument'
     },
     {
@@ -117,7 +117,7 @@ export default function App() {
       name: 'Tuner',
       category: 'accessory',
       price: 'NPR 1,800',
-      image: '/attached_assets/images_1763739393655.jpg',
+      image: '/attached_assets/download_1763739443223.jpg',
       description: 'Digital tuner with high precision'
     }
   ]
