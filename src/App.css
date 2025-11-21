@@ -332,14 +332,33 @@ body {
   border-radius: 20px;
   padding: 2.5rem;
   text-align: center;
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(139, 90, 60, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.guitar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(139, 90, 60, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.guitar-card:hover::before {
+  left: 100%;
 }
 
 .guitar-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(139, 90, 60, 0.15);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(139, 90, 60, 0.25), 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: rgba(139, 90, 60, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #fdfcfb 100%);
 }
 
 .guitar-icon {
@@ -348,12 +367,15 @@ body {
   object-fit: cover;
   border-radius: 15px;
   margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .guitar-card:hover .guitar-icon {
-  transform: scale(1.05);
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 15px 35px rgba(139, 90, 60, 0.3), 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
 }
 
 .guitar-name {
@@ -361,12 +383,25 @@ body {
   font-size: 1.6rem;
   color: #2c2419;
   margin-bottom: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.guitar-card:hover .guitar-name {
+  color: #8b5a3c;
+  transform: translateY(-3px);
+  letter-spacing: 0.5px;
 }
 
 .guitar-description {
   color: #6b5444;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+  transition: all 0.3s ease;
+  line-height: 1.6;
+}
+
+.guitar-card:hover .guitar-description {
+  color: #4a3828;
 }
 
 .guitar-footer {
@@ -376,12 +411,25 @@ body {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(139, 90, 60, 0.1);
+  transition: all 0.3s ease;
+}
+
+.guitar-card:hover .guitar-footer {
+  border-top-color: rgba(139, 90, 60, 0.3);
+  padding-top: 1.8rem;
 }
 
 .guitar-price {
   font-size: 1.4rem;
   font-weight: 700;
   color: #8b5a3c;
+  transition: all 0.3s ease;
+}
+
+.guitar-card:hover .guitar-price {
+  transform: scale(1.1);
+  color: #6f4730;
+  text-shadow: 0 2px 8px rgba(139, 90, 60, 0.2);
 }
 
 .buy-button {
@@ -392,13 +440,36 @@ body {
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(139, 90, 60, 0.3);
+}
+
+.buy-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.buy-button:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .buy-button:hover {
   background: #6f4730;
-  transform: scale(1.05);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 90, 60, 0.5);
+  letter-spacing: 0.5px;
 }
 
 .about-section {
