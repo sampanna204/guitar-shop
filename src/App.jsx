@@ -10,70 +10,123 @@ export default function App() {
       name: 'Mantra Karma',
       category: 'acoustic',
       price: 'NPR 18,500',
-      image: '/attached_assets/images_1763737388792.jpg',
+      image: '/attached_assets/image_1763738273431.png',
       description: 'Premium Nepalese craftsmanship with beautiful design'
     },
     {
       id: 2,
       name: 'Mantra Prakriti',
-      category: 'electric',
-      price: 'NPR 49,000',
-      image: '/attached_assets/download_1763737335525.jpg',
-      description: 'Stunning blue electric guitar with exceptional tone'
+      category: 'acoustic',
+      price: 'NPR 22,500',
+      image: '/attached_assets/download_1763738284808.jpg',
+      description: 'Warm tones perfect for traditional melodies'
     },
     {
       id: 3,
       name: 'Mantra Heritage',
-      category: 'acoustic',
-      price: 'NPR 22,500',
-      image: '/attached_assets/download_1763737298828.jpg',
-      description: 'Warm tones perfect for traditional melodies'
+      category: 'electric',
+      price: 'NPR 35,000',
+      image: '/attached_assets/image_1763738282953.png',
+      description: 'Rich heritage with modern playability'
     },
     {
       id: 4,
       name: 'Mantra Headless',
-      category: 'acoustic',
-      price: 'NPR 35,000',
-      image: '/attached_assets/download_1763737307412.jpg',
+      category: 'electric',
+      price: 'NPR 49,000',
+      image: '/attached_assets/download_1763738286135.jpg',
       description: 'Innovative headless design with modern appeal'
     },
     {
       id: 5,
       name: 'Sahana Huchill',
-      category: 'electric',
-      price: 'NPR 65,000',
-      image: '/attached_assets/download_1763737341000.jpg',
-      description: 'High-end electric with stunning finish'
+      category: 'acoustic',
+      price: 'NPR 28,000',
+      image: '/attached_assets/download_1763738289678.jpg',
+      description: 'Classic acoustic with premium tone'
     },
     {
       id: 6,
       name: 'Sahana Bazz',
       category: 'electric',
       price: 'NPR 58,000',
-      image: '/attached_assets/download_1763737314152.jpg',
+      image: '/attached_assets/download_1763738291852.jpg',
       description: 'Unique artistic design with powerful sound'
     },
     {
       id: 7,
       name: 'Sahana Kali',
       category: 'electric',
-      price: 'NPR 72,000',
-      image: '/attached_assets/download_1763737408999.jpg',
+      price: 'NPR 65,000',
+      image: '/attached_assets/download_1763738293165.jpg',
       description: 'Rare wood finish with exceptional sustain'
     },
     {
       id: 8,
       name: 'Parth 2',
       category: 'electric',
-      price: 'NPR 45,000',
-      image: '/attached_assets/rudraright_1763737286030.webp',
-      description: 'Modern design with versatile sound options'
+      price: 'NPR 72,000',
+      image: '/attached_assets/download_1763738294363.jpg',
+      description: 'Modern headless design with versatile sound options'
     }
   ]
 
-  const filteredGuitars = selectedCategory === 'all' 
-    ? guitars 
-    : guitars.filter(g => g.category === selectedCategory)
+  const accessories = [
+    {
+      id: 101,
+      name: 'Guitar Strings Set',
+      category: 'accessory',
+      price: 'NPR 800',
+      image: '/attached_assets/images_1763737388792.jpg',
+      description: 'Premium quality strings for acoustic and electric'
+    },
+    {
+      id: 102,
+      name: 'Guitar Picks Pack',
+      category: 'accessory',
+      price: 'NPR 250',
+      image: '/attached_assets/download_1763737335525.jpg',
+      description: 'Variety pack of premium picks'
+    },
+    {
+      id: 103,
+      name: 'Guitar Capo',
+      category: 'accessory',
+      price: 'NPR 1,200',
+      image: '/attached_assets/download_1763737298828.jpg',
+      description: 'Professional grade capo for perfect tuning'
+    },
+    {
+      id: 104,
+      name: 'Guitar Stand',
+      category: 'accessory',
+      price: 'NPR 1,500',
+      image: '/attached_assets/download_1763737307412.jpg',
+      description: 'Sturdy and protective guitar stand'
+    },
+    {
+      id: 105,
+      name: 'Guitar Bag',
+      category: 'accessory',
+      price: 'NPR 2,500',
+      image: '/attached_assets/download_1763737341000.jpg',
+      description: 'Padded protection for your instrument'
+    },
+    {
+      id: 106,
+      name: 'Tuner',
+      category: 'accessory',
+      price: 'NPR 1,800',
+      image: '/attached_assets/download_1763737314152.jpg',
+      description: 'Digital tuner with high precision'
+    }
+  ]
+
+  const allProducts = [...guitars, ...accessories]
+
+  const filteredProducts = selectedCategory === 'all' 
+    ? allProducts 
+    : allProducts.filter(p => p.category === selectedCategory)
 
   return (
     <div className="app">
@@ -82,7 +135,7 @@ export default function App() {
           <div className="logo">Vintage Strings</div>
           <div className="nav-links">
             <a href="#home">Home</a>
-            <a href="#guitars">Guitars</a>
+            <a href="#products">Products</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </div>
@@ -103,10 +156,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="guitars-section" id="guitars">
+      <section className="guitars-section" id="products">
         <div className="section-header">
-          <h2 className="section-title">Our Collection</h2>
-          <p className="section-subtitle">Each instrument tells a story</p>
+          <h2 className="section-title">Our Products</h2>
+          <p className="section-subtitle">Guitars & Accessories for every musician</p>
         </div>
 
         <div className="filter-buttons">
@@ -114,7 +167,7 @@ export default function App() {
             className={selectedCategory === 'all' ? 'filter-btn active' : 'filter-btn'}
             onClick={() => setSelectedCategory('all')}
           >
-            All Guitars
+            All Products
           </button>
           <button 
             className={selectedCategory === 'acoustic' ? 'filter-btn active' : 'filter-btn'}
@@ -128,16 +181,22 @@ export default function App() {
           >
             Electric
           </button>
+          <button 
+            className={selectedCategory === 'accessory' ? 'filter-btn active' : 'filter-btn'}
+            onClick={() => setSelectedCategory('accessory')}
+          >
+            Accessories
+          </button>
         </div>
 
         <div className="guitars-grid">
-          {filteredGuitars.map(guitar => (
-            <div key={guitar.id} className="guitar-card">
-              <img src={guitar.image} alt={guitar.name} className="guitar-icon" />
-              <h3 className="guitar-name">{guitar.name}</h3>
-              <p className="guitar-description">{guitar.description}</p>
+          {filteredProducts.map(product => (
+            <div key={product.id} className="guitar-card">
+              <img src={product.image} alt={product.name} className="guitar-icon" />
+              <h3 className="guitar-name">{product.name}</h3>
+              <p className="guitar-description">{product.description}</p>
               <div className="guitar-footer">
-                <span className="guitar-price">{guitar.price}</span>
+                <span className="guitar-price">{product.price}</span>
                 <button className="buy-button">View Details</button>
               </div>
             </div>
@@ -148,15 +207,9 @@ export default function App() {
       <section className="about-section" id="about">
         <div className="about-content">
           <div className="about-text">
-            <h2 className="about-title">Crafted With Passion</h2>
-            <p className="about-description">
-              For over 30 years, we've been connecting musicians with their perfect instruments. 
-              Every guitar in our collection is carefully selected for its tone, craftsmanship, 
-              and soul.
-            </p>
-            <p className="about-description">
-              Whether you're strumming your first chord or performing on stage, we believe 
-              the right guitar can inspire your journey.
+            <h2 className="about-title">Vintage Strings</h2>
+            <p className="about-story">
+              Vintage Strings began as a spark between Sampanna and Kurana, growing into a creative circle shaped by the quiet strength of Namuna, the steady rhythm of Paurakh, the calm tone of Simrika, and the bright spark of Ashika. Together, we've built more than a guitar shop — we've created a space where music feels personal, where craftsmanship meets emotion, and where every guitar carries its own story. Step inside, feel the vibe, and let your sound find its home.
             </p>
           </div>
           <div className="about-features">

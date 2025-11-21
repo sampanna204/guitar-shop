@@ -84,7 +84,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c1 100%);
+  background: 
+    linear-gradient(135deg, rgba(245, 230, 211, 0.85) 0%, rgba(232, 213, 193, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=2070') center/cover;
   position: relative;
   overflow: hidden;
   margin-top: 80px;
@@ -354,6 +356,18 @@ body {
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto 1.5rem;
+}
+
+.about-story {
+  font-family: 'Crimson Text', 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #4a3828;
+  line-height: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-align: justify;
 }
 
 .about-features {
