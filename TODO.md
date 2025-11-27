@@ -1,6 +1,3 @@
-# TODO: Implement Mobile Hamburger Menu for Navbar
+# TODO List for Replacing "Kurana" with "Karuna"
 
-## Steps to Complete:
-- [x] Update src/App.jsx: Add React state for menu toggle and onClick handler for nav-toggle
-- [x] Update src/App.css: Add CSS for hiding nav-menu on mobile and showing when active, plus hamburger animation
-- [x] Test the mobile menu functionality using browser tools or mobile view
+- [x] Edit src/App.jsx to replace "Kurana" with "Karuna" in the about-story paragraph
