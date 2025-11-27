@@ -29,7 +29,7 @@ export default function App() {
       name: 'Mantra Karma',
       category: 'acoustic',
       price: 18500,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_200274cf.jpg',
+      image: '/attached_assets/acc 1.jpg',
       description: 'Premium Nepalese craftsmanship with beautiful design'
     },
     {
@@ -37,7 +37,7 @@ export default function App() {
       name: 'Mantra Prakriti',
       category: 'acoustic',
       price: 22500,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_4f8e1810.jpg',
+      image: '/attached_assets/acc 2.jpg',
       description: 'Warm tones perfect for traditional melodies'
     },
     {
@@ -45,15 +45,15 @@ export default function App() {
       name: 'Mantra Heritage',
       category: 'acoustic',
       price: 35000,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_6ad2e6f5.jpg',
+      image: '/attached_assets/acc 3.jpg',
       description: 'Rich heritage with modern playability'
     },
     {
       id: 4,
-      name: 'Mantra Headless',
+      name: 'Sahana Endo',
       category: 'electric',
       price: 49000,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_79d3f30b.jpg',
+      image: '/attached_assets/ele1.jpg',
       description: 'Innovative headless design with modern appeal'
     },
     {
@@ -61,7 +61,7 @@ export default function App() {
       name: 'Sahana Huchill',
       category: 'electric',
       price: 28000,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_9edd943b.jpg',
+      image: '/attached_assets/ele 2.jpg',
       description: 'Classic acoustic with premium tone'
     },
     {
@@ -69,7 +69,7 @@ export default function App() {
       name: 'Sahana Bazz',
       category: 'electric',
       price: 58000,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_a83c83fe.jpg',
+      image: '/attached_assets/ele 3.jpg',
       description: 'Unique artistic design with powerful sound'
     },
     {
@@ -77,7 +77,7 @@ export default function App() {
       name: 'Sahana Kali',
       category: 'electric',
       price: 65000,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_a8e6c8fd.jpg',
+      image: '/attached_assets/ele 4.jpg',
       description: 'Rare wood finish with exceptional sustain'
     },
     {
@@ -85,7 +85,7 @@ export default function App() {
       name: 'Parth 2',
       category: 'electric',
       price: 72000,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_c844e3a1.jpg',
+      image: '/attached_assets/ele 5.jpg',
       description: 'Modern headless design with versatile sound options'
     }
   ]
@@ -96,7 +96,7 @@ export default function App() {
       name: 'Guitar Strings Set',
       category: 'accessory',
       price: 800,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_f1109e41.jpg',
+      image: '/attached_assets/strings.jpg',
       description: 'Premium quality strings for acoustic and electric'
     },
     {
@@ -104,7 +104,7 @@ export default function App() {
       name: 'Guitar Picks Pack',
       category: 'accessory',
       price: 250,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.50_4538776b.jpg',
+      image: '/attached_assets/pick.jpg',
       description: 'Variety pack of premium picks'
     },
     {
@@ -112,7 +112,7 @@ export default function App() {
       name: 'Guitar Capo',
       category: 'accessory',
       price: 1200,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.50_481b2a51.jpg',
+      image: '/capo.jpg',
       description: 'Professional grade capo for perfect tuning'
     },
     {
@@ -120,7 +120,7 @@ export default function App() {
       name: 'Guitar Tuner',
       category: 'accessory',
       price: 1800,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.50_8b38acd6.jpg',
+      image: '/attached_assets/tuner.jpg',
       description: 'Digital tuner with high precision'
     },
     {
@@ -128,7 +128,7 @@ export default function App() {
       name: 'Guitar Bag',
       category: 'accessory',
       price: 2500,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_a8e6c8fd.jpg',
+      image: '/attached_assets/bag.jpg',
       description: 'Padded protection for your instrument'
     },
     {
@@ -136,7 +136,7 @@ export default function App() {
       name: 'Guitar Stand',
       category: 'accessory',
       price: 1500,
-      image: '/attached_assets/WhatsApp Image 2025-11-27 at 20.43.49_fe174c6b.jpg',
+      image: '/attached_assets/stand.jpg',
       description: 'Sturdy and protective guitar stand'
     }
   ]
