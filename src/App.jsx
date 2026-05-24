@@ -344,7 +344,7 @@ export default function App() {
           <div className="about-text">
             <h2 className="about-title">Vintage Strings</h2>
             <p className="about-story">
-              Vintage Strings began as a spark between Sampanna and Karuna, growing into a creative circle shaped by the quiet strength of Namuna, the steady rhythm of Paurakh, the calm tone of Simrika, and the bright spark of Ashika. Together, we've built more than a guitar shop — we've created a space where music feels personal, where craftsmanship meets emotion, and where every guitar carries its own story. Step inside, feel the vibe, and let your sound find its home.
+              Vintage Strings began as a quiet passion for music and creativity, growing into a space where sound, craftsmanship, and emotion come together. More than just a guitar shop, it is a place where every instrument carries a story, every melody feels personal, and every player finds inspiration. Built with dedication, artistic vision, and a love for timeless music, Vintage Strings celebrates the connection between people and the music they create.
             </p>
           </div>
           <div className="about-features">
